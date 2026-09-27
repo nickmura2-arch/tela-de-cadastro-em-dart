@@ -29,7 +29,6 @@ class TelaCadastro extends StatefulWidget {
 }
 
 class _TelaCadastroState extends State<TelaCadastro> {
-  // Cor principal (roxo claro no lugar do verde do layout original)
   static const Color corPrincipal = Color(0xFFB39DDB);
 
   bool _senhaVisivel = false;
@@ -50,7 +49,6 @@ class _TelaCadastroState extends State<TelaCadastro> {
     super.dispose();
   }
 
-  // Constrói cada campo de texto no mesmo estilo (borda arredondada tipo "pilula")
   Widget _campoTexto({
     required TextEditingController controller,
     required String label,
@@ -107,7 +105,6 @@ class _TelaCadastroState extends State<TelaCadastro> {
       backgroundColor: Colors.white,
       body: Column(
         children: [
-          // Cabecalho roxo com curva na parte inferior e o titulo "Cadastro"
           ClipPath(
             clipper: _CabecalhoClipper(),
             child: Container(
@@ -214,7 +211,6 @@ class _TelaCadastroState extends State<TelaCadastro> {
   }
 }
 
-// Clipper responsavel pela curva na parte inferior do cabecalho roxo
 class _CabecalhoClipper extends CustomClipper<Path> {
   @override
   Path getClip(Size size) {
